@@ -2,11 +2,14 @@ import React from 'react';
 import { Main, NavBorderTop } from './styles';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { GlobalStyled } from '../../styles/global';
-import { CustomizedButton } from '../../components';
+import { CustomizedButton, ModalView } from '../../components';
 
 export default function Home() {
+  const [show, setShow] = React.useState(false);
+
   return (
     <Main>
+      {show && <ModalView show={show} setShow={setShow} />}
       <GlobalStyled />
       <Container fluid>
         <Row>
@@ -32,7 +35,7 @@ export default function Home() {
                     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                   </p>
                 </Card.Text>
-                <CustomizedButton onClick={() => { }} title="Quero fazer minha matrícula" />
+                <CustomizedButton onClick={() => setShow(true)} title="Quero fazer minha matrícula" />
                 <Button active={false} type="button" variant="null" className="card-button">Outras informações</Button>
               </Card.Body>
             </Card>
