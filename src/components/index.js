@@ -3,5 +3,5 @@ import ModalView from './ModalView';
 
 export {
     CustomizedButton,
-    ModalView
+    ModalView,
 }

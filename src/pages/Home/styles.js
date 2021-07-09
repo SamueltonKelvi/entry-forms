@@ -7,11 +7,15 @@ export const Main = styled.main`
     justify-content: center;
     flex-wrap: wrap;
 
-    .col-header, .card, .card-body{
+    .col-header, .col-footer, .card, .card-body, .card-footer{
         display: flex;
     }
     .col-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         padding: 5%5%;
+        width: 100%;
     }
     .card{
         align-items: flex-start;
@@ -57,6 +61,69 @@ export const Main = styled.main`
         }
         .card-button:hover{
             opacity: 0.8;
+        }
+    }
+    .figure{
+
+    }
+    .col-footer{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .card-footer{
+        flex-direction: row;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        background-color: ${Colors.cls_blue};
+        border-radius: 20px;
+        margin-bottom: 20px;
+
+        .card-header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            background-color: transparent;
+            box-shadow: none;
+            border: none;
+        }
+        .card-img{
+            width: 50%;
+            height: auto;
+            resize: content;
+        }
+        .card-title{
+            font-size: 30px;
+            font-weight: bold;
+            color: ${Colors.cls_white};
+            width: 100%;
+        }
+        .card-content{
+            display: flex;
+            flex-direction: column;
+        }
+        .card-body{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        ul{
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+        }
+        li{
+        }
+        a{
+            font-size: 14px;
+            text-decoration: none;
+            cursor: pointer;
+            color: ${Colors.cls_white};
         }
     }
 `;

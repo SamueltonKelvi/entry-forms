@@ -1,8 +1,10 @@
 import React from 'react';
 import { Main, NavBorderTop } from './styles';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Figure, Image } from 'react-bootstrap';
 import { GlobalStyled } from '../../styles/global';
 import { CustomizedButton, ModalView } from '../../components';
+import Banner from '../../assets/banner.png';
+import IconFooter from '../../assets/book_lover.svg';
 
 export default function Home() {
   const [show, setShow] = React.useState(false);
@@ -39,9 +41,51 @@ export default function Home() {
                 <Button active={false} type="button" variant="null" className="card-button">Outras informações</Button>
               </Card.Body>
             </Card>
+            <Figure className="figure">
+              <Figure.Image
+                width="100%"
+                height="auto"
+                alt="Banner"
+                src={Banner}
+              />
+              <Figure.Caption>
+              </Figure.Caption>
+            </Figure>
           </Col>
         </Row>
-      </Container>
-    </Main>
+        <Row>
+          <Col xl className="col-footer">
+            <Card className="card-footer">
+              <Card.Header className="card-header">
+                <Image fluid src={IconFooter} className="card-img" />
+              </Card.Header>
+              <Card.Body className="card-content">
+                <Card.Title className="card-title">Cursos Graduação</Card.Title>
+                <Card.Text className="card-body">
+                  <ul>
+                    <a href="#">Administração</a>
+                    <a href="#">Ciência da computação</a>
+                    <a href="#">Ciências Contábeis</a>
+                    <a href="#">Direito</a>
+                    <a href="#">Engenharia Civil</a>
+                    <a href="#">Engenharia de Produção</a>
+                    <a href="#">Pegadogia</a>
+                  </ul >
+                  <ul>
+                    <a href="#">Análise e Desenvolvimento de Sistemas</a>
+                    <a href="#">Questão Comercia</a>
+                    <a href="#">Gestão de Recursos Homanos</a >
+                    <a href="#">Gestão Financeira</a >
+                    <a href="#">Logística</a >
+                    <a href="#">Processos Gerenciais</a >
+                    <a href="#">Redes de Computadores</a >
+                  </ul>
+                </Card.Text >
+              </Card.Body >
+            </Card >
+          </Col >
+        </Row >
+      </Container >
+    </Main >
   );
 }
