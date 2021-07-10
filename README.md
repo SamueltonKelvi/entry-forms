@@ -1,3 +1,20 @@
+# About the project
+
+Front end project developed based on the requirements below:
+
+* Define the global (default) configuration of the bootstrap modal, for example: backdrop, animation, etc;
+* On the main page/route, place a text field and a button beside it;
+* When clicking on this button, display the bootstrap modal with the text field content within a paragraph;
+* The modal must contain the close button and it will only be closed by clicking on it, it cannot close with ‘esc’ or by clicking outside the modal;
+* Work the layout using the bootstrap grid and element alignment with flexbox.
+
+# Libraries and dependencies
+
+* React JS
+* Styled components
+* React Boostrap
+* React Icons
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
