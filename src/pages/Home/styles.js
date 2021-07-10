@@ -64,13 +64,54 @@ export const Main = styled.main`
         }
     }
     .figure{
-
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        
+        h4, p{
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            color: ${Colors.cls_black};
+        }
+        p{
+            font-size: 16px;
+        }
+        .content-left{
+            width: 120px;
+            height: 20%;
+            display: block;
+            position: absolute;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            background-color: ${Colors.cls_white};
+            z-index: 1000; 
+            padding: 10px;
+            right: 25%;   
+            border-radius: 50% 0% 0%;
+            text-align: center;
+        }
+        .content-right{
+            border-radius: 50% 0% 0%;
+            text-align: center;
+            height: 20%;
+            width: 120px;
+            display: block;
+            position: absolute; 
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            background-color: ${Colors.cls_white};
+            z-index: 1000;
+            padding: 10px;
+            right: 2%;
+            top: 15%;           
+        }
     }
     .col-footer{
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        padding: 5%5%;
     }
     .card-footer{
         flex-direction: row;
@@ -81,7 +122,6 @@ export const Main = styled.main`
         height: auto;
         background-color: ${Colors.cls_blue};
         border-radius: 20px;
-        margin-bottom: 20px;
 
         .card-header{
             display: flex;
@@ -105,25 +145,82 @@ export const Main = styled.main`
         }
         .card-content{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
         }
         .card-body{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             width: 100%;
         }
         ul{
             display: flex;
             width: 50%;
             flex-direction: column;
+            list-style: none;
         }
         li{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+        hr{
+            width: 10px;
+            border: 2px solid ${Colors.cls_black};
+            margin: 0px 5px;
+            border-radius: 10px;
         }
         a{
             font-size: 14px;
             text-decoration: none;
             cursor: pointer;
+            transition: all 0.2s;
             color: ${Colors.cls_white};
+        }
+        a:hover{
+            color: ${Colors.cls_orange};
+        }
+    }
+
+    @media (max-width: 700px){
+        .col-header {
+            flex-direction: column;
+            padding: 2%;
+        }
+        .card{
+            width: 100%;
+        }
+        .card-footer{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            .card-title{
+                text-align: center;
+            }
+            .card-content{
+                text-align: center;
+                flex-direction: column;
+            }
+            ul{
+                width: 100%;
+            }
+        }
+        .figure{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .content-left{
+                top: 80%;
+                right: 60%;
+                height: 14%;
+            }
+            .content-right{
+                top: 80%;
+                right: 20%;
+                height: 14%;
+            }
         }
     }
 `;
@@ -132,6 +229,9 @@ export const NavBorderTop = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    align-self: center;
     padding: 5px;
+    width: 95%;
     background-color: ${Colors.cls_black};
+    margin: 20px auto;
 `;

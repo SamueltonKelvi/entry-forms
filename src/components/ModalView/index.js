@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
+import { CustomizedButton } from '../../components';
 
 const Container = styled.div`
     display: flex;
@@ -13,6 +14,7 @@ const Container = styled.div`
         font-size: 16px;
         line-height: 25px;
     }
+
 `;
 
 export default function ModalView({ show, setShow }) {
@@ -35,7 +37,7 @@ export default function ModalView({ show, setShow }) {
                     </p>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={() => setShow(false)}>Voltar</Button>
+                    <CustomizedButton title="Voltar" onClick={() => setShow(false)} />
                 </Modal.Footer>
             </Modal>
         </Container>

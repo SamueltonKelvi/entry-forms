@@ -3,6 +3,8 @@ import { Main, NavBorderTop } from './styles';
 import { Container, Row, Col, Card, Button, Figure, Image } from 'react-bootstrap';
 import { GlobalStyled } from '../../styles/global';
 import { CustomizedButton, ModalView } from '../../components';
+import { IoDocumentTextSharp } from 'react-icons/io5';
+import Colors from '../../styles/color';
 import Banner from '../../assets/banner.png';
 import IconFooter from '../../assets/book_lover.svg';
 
@@ -38,17 +40,25 @@ export default function Home() {
                   </p>
                 </Card.Text>
                 <CustomizedButton onClick={() => setShow(true)} title="Quero fazer minha matrícula" />
-                <Button active={false} type="button" variant="null" className="card-button">Outras informações</Button>
+                <Button active={false} type="button" variant="null" className="card-button" onClick={() => alert('Nada por aqui!')}>Outras informações</Button>
               </Card.Body>
             </Card>
             <Figure className="figure">
+              <Figure.Caption className="content-left">
+                <IoDocumentTextSharp size={50} color={Colors.cls_blue} />
+                <h4>Vestibular Online</h4>
+                <p>Enem</p>
+              </Figure.Caption>
               <Figure.Image
                 width="100%"
                 height="auto"
                 alt="Banner"
                 src={Banner}
               />
-              <Figure.Caption>
+              <Figure.Caption className="content-right">
+                <IoDocumentTextSharp size={50} color={Colors.cls_blue} />
+                <h4>Portador de diploma</h4>
+                <p>Transferência</p>
               </Figure.Caption>
             </Figure>
           </Col>
@@ -59,26 +69,26 @@ export default function Home() {
               <Card.Header className="card-header">
                 <Image fluid src={IconFooter} className="card-img" />
               </Card.Header>
-              <Card.Body className="card-content">
+              <Card.Body className="card-body">
                 <Card.Title className="card-title">Cursos Graduação</Card.Title>
-                <Card.Text className="card-body">
+                <Card.Text className="card-content">
                   <ul>
-                    <a href="#">Administração</a>
-                    <a href="#">Ciência da computação</a>
-                    <a href="#">Ciências Contábeis</a>
-                    <a href="#">Direito</a>
-                    <a href="#">Engenharia Civil</a>
-                    <a href="#">Engenharia de Produção</a>
-                    <a href="#">Pegadogia</a>
+                    <li><hr /><a href="#">Administração</a></li>
+                    <li><hr /><a href="#">Ciência da computação</a></li>
+                    <li><hr /><a href="#">Ciências Contábeis</a></li>
+                    <li><hr /><a href="#">Direito</a></li>
+                    <li><hr /><a href="#">Engenharia Civil</a></li>
+                    <li><hr /><a href="#">Engenharia de Produção</a></li>
+                    <li><hr /><a href="#">Pegadogia</a></li>
                   </ul >
                   <ul>
-                    <a href="#">Análise e Desenvolvimento de Sistemas</a>
-                    <a href="#">Questão Comercia</a>
-                    <a href="#">Gestão de Recursos Homanos</a >
-                    <a href="#">Gestão Financeira</a >
-                    <a href="#">Logística</a >
-                    <a href="#">Processos Gerenciais</a >
-                    <a href="#">Redes de Computadores</a >
+                    <li><hr /><a href="#">Análise e Desenvolvimento de Sistemas</a></li>
+                    <li><hr /><a href="#">Questão Comercia</a></li>
+                    <li><hr /><a href="#">Gestão de Recursos Homanos</a ></li>
+                    <li><hr /><a href="#">Gestão Financeira</a ></li>
+                    <li><hr /><a href="#">Logística</a ></li>
+                    <li><hr /><a href="#">Processos Gerenciais</a ></li>
+                    <li><hr /><a href="#">Redes de Computadores</a ></li>
                   </ul>
                 </Card.Text >
               </Card.Body >
